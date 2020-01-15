@@ -54,7 +54,7 @@ def mapping(class_description,validation_annotation):
     #add .jpg at the end of each element
     for image in images_temp:
         for jpg in image:
-            images.append(str(jpg+ '.jpg'))
+            images.append(str(jpg))
 
 
 
@@ -75,9 +75,12 @@ with open('validation-annotations-bbox.csv', 'r') as f ,open('validation-annotat
     # read file row by row
     f.seek(0)
     for row in reader:
-        for image_id in labelname[0]:
-            if image_id == row[2]:
-                csv_output.writerow(row)
+        if row[2] in labelname[0]:
+            csv_output.writerow(row)
+
+        # for image_id in labelname[0]:
+        #     if image_id == row[2]:
+        #         csv_output.writerow(row)
 
 with open('validation-images-with-rotation.csv', 'r') as f ,open('validation-images-with-rotation-2.csv', 'w') as f_output:
     next(f)
@@ -85,13 +88,12 @@ with open('validation-images-with-rotation.csv', 'r') as f ,open('validation-ima
     csv_output = csv.writer(f_output) 
     csv_output.writerow(["ImageID","Subset","OriginalURL","OriginalLandingURL","License","AuthorProfileURL","Author","Title","OriginalSize","OriginalMD5","Thumbnail300KURL","Rotation"])
      
-
+    
     # read file row by row
     f.seek(0)
     for row in reader:
-        for image_id in labelname[1]:
-            if image_id == row[2]:
-                csv_output.writerow(row)
+        if row[0] in labelname[1]:
+            csv_output.writerow(row)
 
 print(onlyfiles)
 

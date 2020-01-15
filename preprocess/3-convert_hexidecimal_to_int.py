@@ -23,7 +23,7 @@ for i in range(len(conv['annotations'])):
 for i in range(len(conv['images'])):
   conv['images'][i]['id'] = int(conv['images'][i]['id'][:15],16)
 
-with open('data_test_convert.json', 'w') as fp:
+with open('/home/maziar/WA/OI/convert_openIm_coco/annotations/instances2_val2017.json', 'w') as fp:
     json.dump(conv, fp)
 
 

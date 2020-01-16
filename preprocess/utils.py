@@ -213,8 +213,8 @@ def convert_openimages_subset(annotation_dir, image_dir, subset, return_data=Fal
         image_sourcefile = 'train-images-boxable-with-rotation.csv'
         annotation_sourcefile = 'train-annotations-bbox.csv'
     elif subset == 'val':
-        image_sourcefile = 'validation-images-with-rotation.csv'
-        annotation_sourcefile = 'validation-annotations-bbox.csv'
+        image_sourcefile = 'validation-images-with-rotation-2.csv'
+        annotation_sourcefile = 'validation-annotations-bbox-1.csv'
     elif subset == 'test':
         image_sourcefile = 'test-images-with-rotation.csv'
         annotation_sourcefile = 'test-annotations-bbox.csv'

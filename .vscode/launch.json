@@ -18,6 +18,7 @@
                 "-j", "0",
                 "--pretrained",
                 "--model", "fasterrcnn_resnet50_fpn",
+                "-p" ,"/home/maziar/WA/OI/convert_openIm_coco/",
                
                 "--evaluate"
             ],

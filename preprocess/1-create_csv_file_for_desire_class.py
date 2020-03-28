@@ -5,7 +5,8 @@ import csv
 import os
 import csv
 import os, shutil
-os.chdir('/home/maziar/WA/OI/convert_openIm_coco/annotations')
+# os.chdir('/home/maziar/WA/OI/convert_openIm_coco/annotations')
+os.chdir('/home/maziar/WA/Git/Evaluate_Google_OpenImages_using_COCO_API/preprocess')
 
 from os import listdir
 from os.path import isfile, join
@@ -95,5 +96,4 @@ with open('validation-images-with-rotation.csv', 'r') as f ,open('validation-ima
         if row[0] in labelname[1]:
             csv_output.writerow(row)
 
-print(onlyfiles)
 
